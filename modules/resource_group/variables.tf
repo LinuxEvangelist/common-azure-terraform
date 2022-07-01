@@ -1,6 +1,6 @@
 variable "name" {
   type    = string
-  default = "1-e5f03673-playground-sandbox"
+  default = "1-8262ee81-playground-sandbox"
 }
 variable "location" {
   type    = string
