@@ -13,10 +13,9 @@ provider "azurerm" {
   skip_provider_registration = true
 }
 
-
 module "az_resource_group" {
-  source = "../../modules/resource_group"
-  name = "1-51c93bf5-playground-sandbox"
+  source   = "../../modules/resource_group"
+  name     = "rg_test_1"
   location = "westus"
 }
 module "az_storage" {
@@ -31,9 +30,10 @@ module "vnet" {
 }
 
 #public IP
-resource "azurerm_public_ip" "comics" {
-  name                = "publicIPForLB"
-  location            = module.az_resource_group.resource_group_location
-  resource_group_name = module.az_resource_group.resource_group_name
-  allocation_method   = "Static"
-}
+
+#resource "azurerm_public_ip" "comics" {
+#  name                = "publicIPForLB"
+#  location            = module.az_resource_group.resource_group_location
+#  resource_group_name = module.az_resource_group.resource_group_name
+#  allocation_method   = "Static"
+#}
